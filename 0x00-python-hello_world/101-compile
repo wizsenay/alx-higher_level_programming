@@ -1,0 +1,10 @@
+#!/bin/bash
+PYFILE=$PYFILE
+PYFILE_NO_EXT=${PYFILE%.py}
+python3 -m compileall $PYFILE
+
+cd __pycache__
+mv $PYFILE_NO_EXT.cpython-38.pyc $PYFILE_NO_EXT.pyc
+cp $PYFILE_NO_EXT.pyc ..
+cd ..
+rm -r __pycache__
