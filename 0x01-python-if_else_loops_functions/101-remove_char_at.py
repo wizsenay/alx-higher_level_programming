@@ -7,4 +7,3 @@ def remove_char_at(str, n):
         if str[n] != i:
             copy_str += i
     return copy_str
-
