@@ -6,4 +6,4 @@ def divisible_by_2(my_list=[]):
             boo_list[count] = True
         else:
             boo_list[count] = False
-        return(boo_list)
+    return(boo_list)
