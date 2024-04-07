@@ -43,7 +43,7 @@ class Square:
         else:
             while (i < self.__size):
                 j = 0
-                while(j < self.__size):
+                while (j < self.__size):
                     print("#", end="")
                     j += 1
                 print()
