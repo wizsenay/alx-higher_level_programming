@@ -12,9 +12,10 @@ class Square:
                     Private instance attribute:
                     size Instantiation with size """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Instantiation with size (int)"""
         self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -30,6 +31,18 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
+    def position(self):
+        """return the value of privet attribut"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """add a new vale to the privet attribut '__position' """
+        if (not isinstance(value[0], int) and not isinstance(value[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
     def area(self):
         """ublic instance method: def area(self):
                  that returns the current square area"""
@@ -43,6 +56,11 @@ class Square:
         else:
             while (i < self.__size):
                 j = 0
+                if self.__position[1] >= 0:
+                    k = 0
+                    while k < self.__position[0]:
+                        print(" ", end="")
+                        k += 1
                 while(j < self.__size):
                     print("#", end="")
                     j += 1
