@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
-import json
-
 """ a modules used to convert any data type to sting foramt(sting type) """
 
-
+import json
 def to_json_string(my_obj):
     """
        prototype
