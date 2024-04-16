@@ -11,6 +11,6 @@ def read_file(filename=""):
             The name of the file we want to open
     """
     with open(filename, 'r', encoding="UTF8") as f:
-        print(f.read())
+        print(f.read(), end="")
 
     f.close()
