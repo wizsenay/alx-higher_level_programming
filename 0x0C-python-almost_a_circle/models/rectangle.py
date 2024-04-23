@@ -1,16 +1,47 @@
 #!/usr/bin/python3
 
 """
-   A modles contain a rectangele calss which used to calculate area and premeter
+   A modles contain a rectangele calss
+       which used to calculate area and premeter
 """
 
 from base import Base
 
 
 class Rectangle(Base):
-    """A rectangele class"""
-    def __init__(self, width=0, height=0, x=0, y=0, id=None):
-        """initalized attributers"""
+    """
+       A class used to calculet some mathimathical
+                  opreation related with rectangle
+       ...
+       Attributes
+       ----------
+       width : int
+          the width of the rectangle
+       height : int
+          the hight(lenght) of the rectanglre
+       x : int
+       y : int
+
+       Methods
+       -------
+       width(), height(), y(), x()
+         getter functions return the value of private attributers
+       width(new_width), height(new_height), y(new_y), x(new_x)
+         setter finctions return set a value to the private attrinuters
+    """
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        parameters
+        ----------
+        width : int
+           the width of the rectangle
+        height : int
+           the hight(lenght) of the rectanglre
+        id : int
+           the id of the instance
+        x : int
+        y : int
+        """
         self.__width = width
         self.__height = height
         self.__x = x
@@ -19,21 +50,23 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ width geter"""
+        """width getter"""
         return self.__width
+
     @property
     def height(self):
         """heigth getter"""
         return self.__height
+
     @property
     def x(self):
         """x getter"""
         return self.__x
+
     @property
     def y(self):
         """y getter"""
         return self.__y
-
 
     @width.setter
     def width(self, new_width):
