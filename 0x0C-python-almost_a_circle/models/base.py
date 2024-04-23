@@ -3,7 +3,7 @@
 """This modlus provide a class used to give an id for the instancess"""
 
 
-class base:
+class Base:
     """
     A base class used to give id for every instancess
     ...
