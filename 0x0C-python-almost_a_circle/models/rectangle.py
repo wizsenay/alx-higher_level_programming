@@ -7,8 +7,7 @@ from base import Base
 
 
 class Rectangle(Base):
-    """
-       A class used to calculet some mathimathical
+    """A class used to calculet some mathimathical
                   opreation related with rectangle
        ...
        Attributes
