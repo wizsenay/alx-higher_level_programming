@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-
-"""
-   A modles contain a rectangele calss
-       which used to calculate area and premeter
+"""A modles contain a rectangele calss
+   which used to calculate area and premeter
 """
 
 from base import Base
