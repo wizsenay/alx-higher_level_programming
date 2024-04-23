@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""A modles contain a rectangele calss
+"""
+A modles contain a rectangele calss
    which used to calculate area and premeter
 """
-
 from base import Base
 
 
@@ -45,25 +45,25 @@ class Rectangle(Base):
         Base.__init__(self, id)
 
     @property
-    def width(self):
+    def width(self) -> int:
         """width getter
         """
         return self.__width
 
     @property
-    def height(self):
+    def height(self) -> int:
         """height getter
         """
         return self.__height
 
     @property
-    def x(self):
+    def x(self) -> int:
         """x getter
         """
         return self.__x
 
     @property
-    def y(self):
+    def y(self) -> int:
         """y getter
         """
         return self.__y
