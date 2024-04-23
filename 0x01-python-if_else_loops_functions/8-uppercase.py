@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 def uppercase(str):
-    upper_case = ''
-    charch = None
+    last_len = len(str) - 1
+    uperr = ""
     for i in str:
-        if ord(i) >= 65 and ord(i) <= 90:
-            upper_case += "{}".format(i)
-        elif ord(i) >= 97 and ord(i) <= 122:
-            charch = ord(i) - 32
-            upper_case += "{:c}".format(charch)
+        if (97 <= ord(i)) and (ord(i) < 123):
+            j = chr(ord(i) - 32)
+            uperr += "{}".format(j) 
         else:
-            upper_case += "{}".format(i)
-    print(upper_case)
+            uperr += "{}".format(i)
+
+    print(uperr)
