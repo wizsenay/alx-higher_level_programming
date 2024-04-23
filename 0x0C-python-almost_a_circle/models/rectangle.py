@@ -27,9 +27,8 @@ class Rectangle(Base):
          setter finctions return set a value to the private attrinuters
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        parameters
-        ----------
+        """parameters
+           ----------
         width : int
            the width of the rectangle
         height : int
