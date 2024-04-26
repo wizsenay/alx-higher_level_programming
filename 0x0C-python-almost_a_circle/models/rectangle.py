@@ -3,11 +3,12 @@
 A modles contain a rectangele calss
    which used to calculate area and premeter
 """
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
-    """A class used to calculet some mathimathical
+    """
+       A class used to calculet some mathimathical
                   opreation related with rectangle
        ...
        Attributes
@@ -27,8 +28,9 @@ class Rectangle(Base):
          setter finctions return set a value to the private attrinuters
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """parameters
-           ----------
+        """
+        parameters
+        ----------
         width : int
            the width of the rectangle
         height : int
@@ -38,6 +40,22 @@ class Rectangle(Base):
         x : int
         y : int
         """
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if not isinstance(height, int):
+           raise TypeError("height must be an integer")
+        if not isinstance(x, int):
+           raise TypeError("x must be an integer")
+        if not isinstance(y, int):
+           raise TypeError("y must be an integer")
+        if int(width) <= 0:
+            raise ValueError("width must be > 0")
+        if int(height) <= 0:
+            raise ValueError("height must be > 0")
+        if int(x) < 0:
+            raise ValueError("x must be >= 0")
+        if int(y) < 0:
+            raise ValueError("y must be >= 0")
         self.__width = width
         self.__height = height
         self.__x = x
@@ -72,22 +90,38 @@ class Rectangle(Base):
     def width(self, new_width: int):
         """width setter
         """
+        if not isinstance(new_width, int):
+            raise TypeError("width must be an integer")
+        if int(new_width) <= 0:
+            raise ValueError("width must be > 0")
         self.__width = new_width
 
     @height.setter
     def height(self, new_height: int):
         """height setter
         """
+        if not isinstance(new_height, int):
+            raise TypeError("height must be an integer")
+        if int(new_width) <= 0:
+            raise ValueError("width must be > 0")
         self.__height = new_height
 
     @x.setter
     def x(self, new_x: int):
         """x setter
         """
+        if not isinstance(new_x, int):
+            raise TypeError("x must be an integer")
+        if int(new_x) < 0:
+            raise ValueError("x must be >= 0")
         self.__x = new_x
 
     @y.setter
     def y(self, new_y: int):
         """y setter
         """
+        if not isinstance(new_y, int):
+            raise TypeError("y must be an integer")
+        if int(new_y) < 0:
+            raise ValueError("y must be >= 0")
         self.__y = new_y
