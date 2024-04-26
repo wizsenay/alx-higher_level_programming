@@ -68,6 +68,20 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect_area_1.area(), 12)
         self.assertEqual(rect_area_2.area(), 25)
 
+    """
+    def test_display(self):
+
+        dis_wiht_x_y = Rectangle(3, 2, 1, 4)
+        dis_wiht_no_x = Rectangle(3, 2, 0, 4)
+        dis_wiht_no_y = Rectangle(3, 2, 1)
+        dis_with_no_x_y = Rectangle(3, 2)
+
+        self.assertEqual(dis_wiht_x_y.display(), "###\n###")
+        self.assertEqual(dis_with_no_x.display(), "###\n###")
+        self.assertEqual(dis_with_no_y.display(), "###\n###")
+        self.assertEqual(dis_with_no_x_y.display(), "###\n###")
+    """
+
 
 if __name__ == '__main__':
     unittest.main()
