@@ -52,11 +52,11 @@ class TestRectangle(unittest.TestCase):
         # check when wrong value pass it raise aValueError
 
         with self.assertRaises(ValueError, msg="width must be > 0"):
-            Rectangle(-2, 3)  # for width atrributer
+            Rectangle(-1, 2, 0, 5)  # for width atrributer
         with self.assertRaises(ValueError, msg="height must be > 0"):
-            Rectangle(2, 0)  # for hieght attributer
+            Rectangle(2, 0, 2, 1)  # for hieght attributer
         with self.assertRaises(ValueError, msg="x must be >= 0"):
-            Rectangle(2, 3, -3)  # for x attributer
+            Rectangle(2, 3, -3, 1)  # for x attributer
         with self.assertRaises(ValueError, msg="y must be >= 0"):
             Rectangle(2, 3, 1, -2)  # for y attribyter
 
