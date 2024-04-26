@@ -26,8 +26,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """ initalize the attributers"""
 
-        self.__size = size
-        Rectangle.__init__(self, self.__size, self.__size, x, y, id)
+        Rectangle.__init__(self, size, size, x, y, id)
 
     def __str__(self):
         """
@@ -47,11 +46,35 @@ class Square(Rectangle):
     @property
     def size(self):
         """ getter"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, new_size):
         """ setter"""
-        self.__size = new_size
-        self.width = self.__size
-        self.height = self.__size
+        self.width = new_size
+        self.height = new_size
+
+    def update(self, *args, **kwargs):
+        """
+           assigns an argument to each attribute
+        """
+        if args:
+            if len(args) >= 1:
+                self.id = int(args[0])
+            if len(args) >= 2:
+                self.width = int(args[1])
+                self.height = int(args[1])
+            if len(args) >= 3:
+                self.x = int(args[2])
+            if len(args) >= 4:
+                self.y = int(args[3])
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.width = kwargs["size"]
+                self.height = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
