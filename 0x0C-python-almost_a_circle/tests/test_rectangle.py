@@ -60,6 +60,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError, msg="y must be >= 0"):
             Rectangle(2, 3, 1, -2)  # for y attribyter
 
+    def test_area(self):
+        """ test the area attributer"""
+        rect_area_1 = Rectangle(4, 3)
+        rect_area_2 = Rectangle(5, 5)
+
+        self.assertEqual(rect_area_1.area(), 12)
+        self.assertEqual(rect_area_2.area(), 25)
+
 
 if __name__ == '__main__':
     unittest.main()
