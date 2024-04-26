@@ -137,8 +137,18 @@ class Rectangle(Base):
         print in stdout the Rectangle instance with the character #
         """
         i = 0
+        count = 0
+
+        while count < self.__y:
+            print()
+            count += 1
+
         while i < self.__height:
             j = 0
+            k = 0
+            while k < self.__x:
+                print(' ', end="")
+                k += 1
             while j < self.__width:
                 print('#', end="")
                 j += 1
