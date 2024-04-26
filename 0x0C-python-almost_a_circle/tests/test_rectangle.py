@@ -25,11 +25,14 @@ class TestRectangle(unittest.TestCase):
         # tese the correct error are raise
         # check when rong type(other than int) it rise TypeError
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(TypeError, msg="width must be an integer"):
             Rectangle("not_int", 3)  # for width atrributer
+        with self.assertRaises(TypeError, msg="height must be an integer"):
             Rectangle(3, 4.567)  # for hieght attributer
+        with self.assertRaises(TypeError, msg="x must be an integer"):
             Rectangle(3, 4, "not_int")  # for x attributer
-            Rectangle(3, 4, 8, True)  # for y attribyter
+        with self.assertRaises(TypeError, msg="y must be an integer"):
+            Rectangle(3, 4, 8, "nit")  # for y attribyter
 
     def test_ValueError_attributers_init(self):
         # tese the correct errors are raises
