@@ -170,3 +170,15 @@ class Rectangle(Base):
                    self.__height
                    )
                 )
+
+    def update(self, *args):
+        if len(args) >= 1:
+            self.id = int(args[0])
+        if len(args) >= 2:
+            self.__width = int(args[1])
+        if len(args) >= 3:
+            self.__height = int(args[2])
+        if len(args) >= 4:
+            self.__x = int(args[3])
+        if len(args) >= 5:
+            self.__y = int(args[4])
