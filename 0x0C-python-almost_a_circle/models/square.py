@@ -26,7 +26,8 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """ initalize the attributers"""
 
-        Rectangle.__init__(self, size, size, x, y, id)
+        self.__size = size
+        Rectangle.__init__(self, self.__size, self.__size, x, y, id)
 
     def __str__(self):
         """
@@ -42,3 +43,15 @@ class Square(Rectangle):
                    self.width
                    )
                 )
+
+    @property
+    def size(self):
+        """ getter"""
+        return self.__size
+
+    @size.setter
+    def size(self, new_size):
+        """ setter"""
+        self.__size = new_size
+        self.width = self.__size
+        self.height = self.__size
