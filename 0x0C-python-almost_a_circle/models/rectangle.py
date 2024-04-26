@@ -4,6 +4,7 @@
 A modles contain a rectangele calss
    which used to calculate area and premeter
 """
+import json
 from models.base import Base
 
 
@@ -196,3 +197,13 @@ class Rectangle(Base):
                 self.__x = kwargs["x"]
             if "y" in kwargs:
                 self.__y = kwargs["y"]
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+            }
