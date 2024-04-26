@@ -14,11 +14,24 @@ class TestRectangle(unittest.TestCase):
 
     def test_init(self):
         rectangle_1 = Rectangle(4, 3,  2, 1)
+        rectangle_2 = Rectangle(10, 9,  1,)
+        rectangle_3 = Rectangle(5, 5,)
+
 
         self.assertEqual(rectangle_1.width, 4)
         self.assertEqual(rectangle_1.height, 3)
         self.assertEqual(rectangle_1.x, 2)
         self.assertEqual(rectangle_1.y, 1)
+
+        self.assertEqual(rectangle_2.width, 10)
+        self.assertEqual(rectangle_2.height, 9)
+        self.assertEqual(rectangle_2.x, 1)
+        self.assertEqual(rectangle_2.y, 0)
+
+        self.assertEqual(rectangle_3.width, 5)
+        self.assertEqual(rectangle_3.height, 5)
+        self.assertEqual(rectangle_3.x, 0)
+        self.assertEqual(rectangle_3.y, 0)
 
     def test_TypeError_attributers_init(self):
 
@@ -38,10 +51,13 @@ class TestRectangle(unittest.TestCase):
         # tese the correct errors are raises
         # check when wrong value pass it raise aValueError
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError, msg="width must be > 0"):
             Rectangle(-2, 3, 1, 2)  # for width atrributer
+        with self.assertRaises(ValueError, msg="height must be > 0"):
             Rectangle(2, -3, 1, 2)  # for hieght attributer
+        with self.assertRaises(ValueError, msg="x must be >= 0"):
             Rectangle(-2, 3, 0, 2)  # for x attributer
+        with self.assertRaises(ValueError, msg="y must be >= 0"):
             Rectangle(2, 3, 1, -2)  # for y attribyter
 
 
