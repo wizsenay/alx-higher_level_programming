@@ -10,7 +10,7 @@ class Square extends copSquare {
     for (let i = 0; i < this.width; i++) {
       let line = '';
       for (let j = 0; j < this.width; j++) {
-         line += c;
+        line += c;
       }
       console.log(line);
     }
